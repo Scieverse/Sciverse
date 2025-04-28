@@ -45,7 +45,7 @@ function ArticleDetails() {
               Auteurs:
             </p>
             <p className="text-[#190B28] text-base ">
-              {article.authors.map((auteur) => {
+              {article.authors?.map((auteur) => {
                 return auteur.name + ". ";
               })}
               ;
@@ -58,8 +58,8 @@ function ArticleDetails() {
               Institutions:
             </p>
             <p className="text-[#190B28] text-base ">
-              {article.authors.map((auteur) => {
-                return auteur.institutions.map((institution) => {
+              {article.authors?.map((auteur) => {
+                return auteur.institutions?.map((institution) => {
                   return institution.institution_name + ", ";
                 });
               })}
@@ -72,7 +72,7 @@ function ArticleDetails() {
               Mots clés:
             </p>
             <p className="text-[#190B28] text-base">
-              {article.keywords.map((keyword) => {
+              {article.keywords?.map((keyword) => {
                 return keyword + ", ";
               })}
             </p>
@@ -81,10 +81,10 @@ function ArticleDetails() {
           <div className="flex content-center flex-nowrap my-3">
             <LiaPenFancySolid className="h-6 w-6 mr-1" />
             <p className="text-[#190B28] text-basefont-semibold mr-1">
-              Mots clés:
+              References:
             </p>
             <p className="text-[#190B28] text-base">
-              {article.references.map((reference) => {
+              {article.references?.map((reference) => {
                 return reference + ", ";
               })}
             </p>
